@@ -27,7 +27,7 @@
  * @url https://github.com/kchavezdev/RMMZ-Plugins
  * @target MZ MV
  *
- * @plugindesc [v1.1.1]Play text sound effects based on face graphic.
+ * @plugindesc [v1.1.2]Play text sound effects based on face graphic.
  *
  * @help
  * KC_TextSounds.js
@@ -40,8 +40,6 @@
  *         | KC_TextSounds text code parameters remain in the message log
  *     + Known Fixes:
  *         | None
- * 
- * 
  * 
  * -----------------------------Plugin Parameters------------------------------
  * 
