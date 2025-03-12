@@ -416,6 +416,8 @@ KCDev.TextSounds.parseNoError = function (jsonStr) {
 KCDev.TextSounds.addConfigs = function () {
     const presets = KCDev.TextSounds.presets;
 
+    const convertTextSoundParam = KCDev.TextSounds.convertTextSoundParam;
+
     const parseNoError = KCDev.TextSounds.parseNoError;
 
     const addConfig = KCDev.TextSounds.addConfig;
