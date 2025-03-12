@@ -451,11 +451,16 @@ KCDev.TextSounds.addConfigs = function () {
     }
 };
 
-KCDev.TextSounds.Scene_Boot_onDatabaseLoaded = Scene_Boot.prototype.onDatabaseLoaded;
-Scene_Boot.prototype.onDatabaseLoaded = function () {
-    KCDev.TextSounds.Scene_Boot_onDatabaseLoaded.apply(this, arguments);
+if (Utils.RPGMAKER_NAME === 'MZ') {
+    KCDev.TextSounds.Scene_Boot_onDatabaseLoaded = Scene_Boot.prototype.onDatabaseLoaded;
+    Scene_Boot.prototype.onDatabaseLoaded = function () {
+        KCDev.TextSounds.Scene_Boot_onDatabaseLoaded.apply(this, arguments);
+        KCDev.TextSounds.addConfigs();
+    };
+}
+else if (Utils.RPGMAKER_NAME === 'MV') {
     KCDev.TextSounds.addConfigs();
-};
+}
 
 KCDev.TextSounds.Game_Message_initialize = Game_Message.prototype.initialize;
 Game_Message.prototype.initialize = function () {
